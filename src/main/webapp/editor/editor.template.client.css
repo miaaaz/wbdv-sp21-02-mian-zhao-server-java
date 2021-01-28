@@ -1,0 +1,67 @@
+
+.list-group-item a:link {
+  text-decoration: none;
+  color: black;
+}
+
+.list-group-item a:not(.active):visited {
+  text-decoration: none;
+  color: black;
+}
+
+.list-group-item a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.list-group-item a:not(.active):hover {
+  color: grey;
+}
+
+.list-group-item a:hover {
+  color: grey;
+}
+
+.list-group-item.active {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
+.nav-pills .nav-link:not(.active) {
+  background-color: #6c757d;
+  color: white;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: black;
+}
+
+.nav-link {
+  margin-right: 30px;
+}
+
+.btn-close {
+  margin-right: 10px;
+}
+
+.wbdv-module-delete-icon {
+  margin: 5px;
+}
+
+.wbdv-module-nav {
+  padding: 24px;
+}
+
+.wbdv-nav-content {
+  padding: 24px 0;
+}
+
+.wbdv-module-add-div {
+  padding: 10px;
+}
+
+.wbdv-module-add-btn {
+  float: right;
+}
