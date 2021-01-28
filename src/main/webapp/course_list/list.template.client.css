@@ -1,0 +1,46 @@
+body {
+  background-color: #e8e8e8;
+}
+
+.container {
+  padding-top: 15px;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: grey;
+}
+
+.wbdv-nav-plus {
+  padding: 10px;
+}
+
+.navbar-brand {
+  padding-left: 10px;
+}
+
+
+.wbdv-nav-menu {
+  color: white;
+}
+
+.btn-outline-secondary {
+  color: black !important;
+  border-color: black !important;
+  background-color: white !important;
+}
+
+.btn-outline-secondary:hover {
+  color: #6c757d !important;
+  background-color: #e8e8e8 !important;
+}
+
