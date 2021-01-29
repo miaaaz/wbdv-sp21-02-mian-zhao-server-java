@@ -1,5 +1,6 @@
 body {
-  background-color: #e8e8e8;
+  background-color: #f1f1f1;
+  font-family: 'Mulish', sans-serif;
 }
 
 .container {
@@ -8,16 +9,16 @@ body {
 
 a:link {
   text-decoration: none;
-  color: black;
+  color: grey;
 }
 
 a:visited {
   text-decoration: none;
-  color: black;
+  color: grey;
 }
 
 a:hover {
-  color: grey;
+  color: black;
 }
 
 .wbdv-nav-plus {
@@ -30,7 +31,7 @@ a:hover {
 
 
 .wbdv-nav-menu {
-  color: white;
+  color: black;
 }
 
 .btn-outline-secondary {
@@ -44,3 +45,37 @@ a:hover {
   background-color: #e8e8e8 !important;
 }
 
+.wbdv-table-wrapper {
+  background-color: white;
+
+}
+
+.wbdv-thead {
+  font-family: 'Heebo', sans-serif;
+  font-size: 15px;
+  color: #4c4c4c;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+/*Text align*/
+td {
+  text-align: center;
+}
+
+tbody {
+  color: grey;
+  font-size: 15px;
+}
+
+.wbdv-time {
+  color: #606060;
+}
+
+
+.navbar {
+  background-color: white;
+}
+
+.fa-trash-alt {
+  color: red;
+}
