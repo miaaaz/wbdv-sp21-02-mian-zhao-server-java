@@ -1,6 +1,6 @@
 body {
-  background-color: #f1f1f1;
-  font-family: 'Mulish', sans-serif;
+  background-color: #f3f3f3;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .container {
@@ -51,8 +51,8 @@ a:hover {
 }
 
 .wbdv-thead {
-  font-family: 'Heebo', sans-serif;
-  font-size: 15px;
+  font-weight: 500;
+  font-size: 14px;
   color: #4c4c4c;
   border-bottom: 1px solid #d0d0d0;
 }
@@ -70,7 +70,6 @@ tbody {
 .wbdv-time {
   color: #606060;
 }
-
 
 .navbar {
   background-color: white;

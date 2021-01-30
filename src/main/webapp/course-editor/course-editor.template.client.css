@@ -1,0 +1,191 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+}
+/*Top navbar*/
+.navbar {
+  background-color: white;
+  box-shadow: 0 1px 0 0 #eeeeee;
+}
+
+.navbar-brand {
+  color: #707070;
+}
+
+.navbar-brand:hover {
+  color: #606060;
+}
+
+/*Nav bar item*/
+.wbdv-nav-item a:not(.active):visited {
+  color: grey;
+}
+
+.wbdv-nav-item a:not(.active):link {
+  color: grey;
+}
+
+/*Nav bar item on hover*/
+.wbdv-nav-item a:not(.active):hover {
+  color: #FF4D4D;
+}
+
+/*Active visited nav bar item*/
+.wbdv-nav-item a:visited {
+  text-decoration: none;
+  color: #FF4D4D;
+}
+
+.wbdv-nav-item a:link {
+  text-decoration: none;
+  color: #FF4D4D;
+}
+
+/*Toggler icon on nav bar*/
+.navbar-toggler-icon {
+  padding-top: 5px;
+  color: grey;
+}
+
+/*Left sidebar wrapper*/
+.wbdv-sidebar-wrapper {
+  padding-right: 0;
+  background-color: #FF4D4D;
+  min-height: 100vh;
+  font-size: 14px;
+}
+
+/*Sidebar item*/
+.wbdv-sidebar-item {
+  padding: 10px 30px;
+}
+
+.wbdv-sidebar-item a:link {
+  text-decoration: none;
+  color: #FF4D4D;
+}
+
+.wbdv-sidebar-item a:not(.active):visited {
+  text-decoration: none;
+  color: white;
+}
+
+.wbdv-sidebar-item a:not(.active):link {
+  text-decoration: none;
+  color: white;
+}
+
+/*Active visited sidebar item*/
+.wbdv-sidebar-item a:visited {
+  text-decoration: none;
+  color: #FF4D4D;
+}
+
+/*Hover on inactive sidebar item*/
+.wbdv-sidebar-item a:not(.active):hover {
+  color: #FFD3D3;
+}
+
+/*Hover on module box*/
+li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/*Hover on module content*/
+.wbdv-sidebar-item a:hover {
+  color: #B33636;
+}
+
+/*All topic pills*/
+.nav-pills .nav-link {
+  border-radius: 10px;
+}
+
+/*Active sidebar item*/
+.wbdv-sidebar-item.active {
+  background-color: #fff;
+}
+
+/*Inactive topics*/
+.nav-pills .nav-link:not(.active) {
+  background-color: white;
+  color: #FF4D4D;
+  border: 1px #FF4D4D solid;
+}
+
+/*Inactive topics on hover*/
+.nav-pills .nav-link:not(.active):hover {
+  background-color: #FFD3D3;
+  color: #FF4D4D;
+  border: 1px #FFD3D3 solid;
+}
+
+/*Active topic*/
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: #FF4D4D;
+}
+
+.nav-link {
+  margin-right: 30px;
+}
+
+/*Close buttons*/
+.wbdv-btn-close {
+  padding-right: 0;
+}
+
+.wbdv-module-delete-icon {
+  margin: 5px;
+}
+
+.wbdv-module-nav {
+  padding: 24px 0;
+}
+
+/*Add button wrapper in the sidebar*/
+.wbdv-module-add-div {
+  padding: 10px 25px;
+}
+
+/*Add button in the sidebar*/
+.wbdv-module-add-btn {
+  color: white;
+  border-color: white;
+}
+
+/*Custom style for buttons on hover*/
+.wbdv-button-on-hover:hover {
+  background-color: #FFD3D3;
+  color: #FF4D4D;
+  border-color: #FFD3D3;
+}
+
+.wbdv-sidebar {
+  padding: 0;
+}
+
+/*Editor wrapper*/
+.wbdv-editor-wrapper {
+}
+
+/*Navbar in the editor*/
+.wbdv-editor-nav {
+  padding: 25px 25px;
+  font-size: 12px;
+}
+
+/*Main content of the editor*/
+.wbdv-editor-main {
+  padding: 0 25px;
+}
+
+/*Custom color*/
+.wbdv-grey-color {
+  color: grey;
+}
+
+.wbdv-main-color {
+  color: #ff7400;
+}
+
