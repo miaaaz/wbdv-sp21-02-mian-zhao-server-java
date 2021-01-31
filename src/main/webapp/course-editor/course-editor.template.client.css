@@ -1,15 +1,19 @@
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 13px;
+  font-weight: 200;
 }
+
 /*Top navbar*/
 .navbar {
   background-color: white;
   box-shadow: 0 1px 0 0 #eeeeee;
+  font-weight: 500;
 }
 
 .navbar-brand {
   color: #707070;
+  font-weight: 300;
 }
 
 .navbar-brand:hover {
@@ -173,6 +177,7 @@ li:hover {
 .wbdv-editor-nav {
   padding: 25px 25px;
   font-size: 12px;
+  font-weight: 400;
 }
 
 /*Main content of the editor*/
