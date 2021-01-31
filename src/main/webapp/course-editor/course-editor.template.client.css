@@ -12,12 +12,17 @@ body {
 }
 
 .navbar-brand {
-  color: #707070;
-  font-weight: 300;
+  font-weight: 600;
+  color: #818181;
 }
 
 .navbar-brand:hover {
   color: #606060;
+}
+
+.wbdv-nav-items {
+  font-size: 15px;
+  font-weight: 400;
 }
 
 /*Nav bar item*/
@@ -176,7 +181,7 @@ li:hover {
 /*Navbar in the editor*/
 .wbdv-editor-nav {
   padding: 25px 25px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
 }
 
