@@ -2,7 +2,6 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     font-weight: 200;
-    /*background-color: #FF4D4D;*/
 }
 
 .wbdv-wrapper {
@@ -30,7 +29,6 @@ body {
 #wbdv-login {
     background-color: #FF4D4D;
     color: white;
-    font-size: 15px;
 }
 
 #wbdv-login:hover {
