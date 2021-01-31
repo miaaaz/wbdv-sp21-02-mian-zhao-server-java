@@ -12,58 +12,6 @@
 
 </head>
 <body>
-
-<!--<div class="container">-->
-<!--    <h1>-->
-<!--        Profile-->
-<!--    </h1>-->
-
-<!--    <div class="alert alert-success" id="alertFld" role="alert">-->
-<!--        Profile successfully saved-->
-<!--    </div>-->
-
-<!--    <div class="mb-3 row">-->
-<!--        <label for="usernameFld" class="col-sm-2 col-form-label">Username</label>-->
-<!--        <div class="col-sm-10">-->
-<!--            <input type="text" class="form-control" id="usernameFld" value="Alice" readonly>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="mb-3 row">-->
-<!--        <label for="phoneFld" class="col-sm-2 col-form-label">Phone</label>-->
-<!--        <div class="col-sm-10">-->
-<!--            <input type="text" class="form-control" id="phoneFld">-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="mb-3 row">-->
-<!--        <label for="emailFld" class="col-sm-2 col-form-label">Email</label>-->
-<!--        <div class="col-sm-10">-->
-<!--            <input type="email" class="form-control" id="emailFld">-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="mb-3 row">-->
-<!--        <label for="dobFld" class="col-sm-2 col-form-label">Date of Birth</label>-->
-<!--        <div class="col-sm-10">-->
-<!--            <input type="date" class="form-control" id="dobFld">-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="mb-3 row">-->
-<!--        <label for="roleFld" class="col-sm-2 col-form-label">Role</label>-->
-<!--        <div class="col-sm-10">-->
-<!--            <select class="form-select" id="roleFld">-->
-<!--                <option value="Faculty">Faculty</option>-->
-<!--                <option value="Student">Student</option>-->
-<!--                <option value="Admin">Admin</option>-->
-<!--            </select>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="d-grid gap-2">-->
-<!--        <button id="updateBtn" class="btn btn-dark" type="button">Update</button>-->
-<!--        <a href="../index.html" id="logoutBtn" class="btn btn-outline-dark">Loggout</a>-->
-
-<!--    </div>-->
-
-</div>
-
 <div class="container wbdv-wrapper">
     <div class="wbdv-profile-box">
         <!--Header-->
@@ -98,13 +46,14 @@
                 <input type="date" class="form-control" id="dobFld">
 
             </div>
+            <!--Readonly role-->
             <div class="form-group mb-2">
                 <label for="roleFld" class="col-form-label">Role</label>
                 <div>
                     <select class="form-select" id="roleFld">
                         <option value="Faculty">Faculty</option>
-                        <option value="Student">Student</option>
-                        <option value="Admin">Admin</option>
+                        <option disabled value="Student">Student</option>
+                        <option disabled value="Admin">Admin</option>
                     </select>
                 </div>
             </div>
