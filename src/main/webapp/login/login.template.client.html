@@ -2,52 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="./login.style.client.css" rel="stylesheet">
+    <!--    Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
-<div class="container">
-    <h1 class="text-center">
-        Sign In
-    </h1>
+<div class="container wbdv-wrapper">
+    <div class="wbdv-login-box">
+        <!--    Header-->
+        <h1 class="text-center h3 mb-3 mx-auto">
+            Sign In
+        </h1>
 
-    <form>
-
-        <div class="mb-3 row">
-            <label for="username" class="form-label col-sm-2">Username</label>
-            <div class="col-sm-10">
+        <!--    Body-->
+        <form>
+            <div class="form-group mb-2">
+                <label for="username" class="form-label">Username</label>
                 <input id="username" class="form-control"/>
             </div>
-        </div>
 
-        <div class="mb-3 row">
-            <label for="password" class="form-label col-sm-2">Password</label>
-            <div class="col-sm-10">
+            <div class="form-group mb-2">
+                <label for="password" class="form-label ">Password</label>
                 <input id="password" class="form-control"/>
             </div>
-        </div>
 
-        <div class="form-group row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-10 d-grid gap-2">
-                <button class="btn btn-dark btn-block" id="wbdv-login">Sign in</button>
-            </div>
-        </div>
+            <!--        Links-->
+            <div class="row justify-content-between">
+                <div class="col-6">
+                    <a href="#">Forgot Password?</a>
+                </div>
 
-        <div class="row justify-content-between">
-            <label class="form-label col-sm-2"></label>
-            <div class="col-5">
-                <a href="#">Forgot Password?</a>
+                <div  class="col-4 text-end">
+                    <a href="../register/register.template.client.html">Sign up</a>
+                </div>
             </div>
 
-            <div  class="col-5 text-end">
-                <a href="../register/register.template.client.html">Sign up</a>
+            <!--    Sign in Button-->
+            <div class="form-group row mb-3 mt-2">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-block" id="wbdv-login">Sign in</button>
+                </div>
             </div>
-        </div>
 
-    </form>
+            <!--    Cancel-->
+            <div class="row mt-2 text-center">
+                <a href="../index.html">Cancel</a>
+            </div>
+
+        </form>
+    </div>
+
 
 </div>
 
