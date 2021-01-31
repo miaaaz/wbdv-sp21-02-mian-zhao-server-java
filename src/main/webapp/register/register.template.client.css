@@ -2,7 +2,6 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     font-weight: 200;
-    background-color: #FF4D4D;
 }
 
 .wbdv-wrapper {
@@ -17,6 +16,14 @@ body {
     padding: 40px 20px;
     border-radius: 20px;
     margin: 0 auto;
+    box-shadow: 1px 2px 3px #efefef;
+    border: #e8e8e8 1px solid;
+}
+
+.wbdv-header {
+    font-size: 25px;
+    font-weight: 600;
+    color: #818181;
 }
 
 #wbdv-signup {
