@@ -5,7 +5,7 @@
     <title>Course List</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link href="list.template.client.css" rel="stylesheet">
+    <link href="course-list.template.client.css" rel="stylesheet">
 <!--    Google fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
@@ -13,25 +13,22 @@
 <body>
 
 <!--Nav bar-->
-<nav class="navbar navbar-expand-lg sticky-top navbar-light shadow">
+<nav class="navbar navbar-expand-lg sticky-top">
     <div class="container-fluid">
         <a href="#">
             <i class="fas fa-bars wbdv-nav-menu"></i>
         </a>
-        <span class="navbar-brand">Course Manager</span>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-            <form class="d-flex">
-                <input class="form-control me-2 " type="text" placeholder="New Course Title"/>
-                <button class="btn btn-outline-secondary btn-sm" type="submit"><i class="fas fa-plus fa-sm wbdv-nav-plus"></i></button>
-            </form>
-        </div>
+        <span class="navbar-brand collapse navbar-collapse">Course Manager</span>
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+        <form class="d-flex">
+            <input class="form-control me-2 wbdv-input" type="text" placeholder="New Course Title"/>
+            <button class="btn btn-sm wbdv-nav-add" type="submit"><i class="fas fa-plus fa-sm wbdv-nav-plus"></i></button>
+        </form>
     </div>
 </nav>
 
+<!--Tables-->
 <div class="container">
     <div class="d-flex mb-2">
         <span class="wbdv-time">Today</span>
@@ -50,7 +47,7 @@
             <tbody>
             <tr>
                 <td>
-                    <a href="../editor/editor.template.client.html">
+                    <a href="../course-editor/course-editor.template.client.html">
                         <i class="far fa-file-alt wbdv-file-icon fa-fw"></i>
                         <span> CS5610</span>
                     </a>
@@ -62,7 +59,7 @@
             </tr>
             <tr>
                 <td>
-                    <a href="../editor/editor.template.client.html">
+                    <a href="../course-editor/course-editor.template.client.html">
                         <i class="far fa-file-alt wbdv-file-icon fa-fw"></i>
                         CS5610
                     </a>
@@ -74,7 +71,7 @@
             </tr>
             <tr>
                 <td>
-                    <a href="../editor/editor.template.client.html">
+                    <a href="../course-editor/course-editor.template.client.html">
                         <i class="far fa-file-alt wbdv-file-icon fa-fw"></i>
                         CS5610
                     </a>
@@ -106,7 +103,7 @@
             <tbody>
             <tr>
                 <td>
-                    <a href="../editor/editor.template.client.html">
+                    <a href="../course-editor/course-editor.template.client.html">
                         <i class="far fa-file-alt wbdv-file-icon fa-fw"></i>
                         CS5610
                     </a>
@@ -118,7 +115,7 @@
             </tr>
             <tr>
                 <td>
-                    <a href="../editor/editor.template.client.html">
+                    <a href="../course-editor/course-editor.template.client.html">
                         <i class="far fa-file-alt wbdv-file-icon fa-fw"></i>
                         CS5610
                     </a>
@@ -130,7 +127,7 @@
             </tr>
             <tr>
                 <td>
-                    <a href="../editor/editor.template.client.html">
+                    <a href="../course-editor/course-editor.template.client.html">
                         <i class="far fa-file-alt wbdv-file-icon fa-fw"></i>
                         CS5610
                     </a>
@@ -161,7 +158,7 @@
             <tbody>
             <tr>
                 <td>
-                    <a href="../editor/editor.template.client.html">
+                    <a href="../course-editor/course-editor.template.client.html">
                         <i class="far fa-file-alt wbdv-file-icon fa-fw"></i>
                         CS5610
                     </a>
@@ -173,7 +170,7 @@
             </tr>
             <tr>
                 <td>
-                    <a href="../editor/editor.template.client.html">
+                    <a href="../course-editor/course-editor.template.client.html">
                         <i class="far fa-file-alt wbdv-file-icon fa-fw"></i>
                         CS5610
                     </a>
@@ -185,7 +182,7 @@
             </tr>
             <tr>
                 <td>
-                    <a href="../editor/editor.template.client.html">
+                    <a href="../course-editor/course-editor.template.client.html">
                         <i class="far fa-file-alt wbdv-file-icon fa-fw"></i>
                         CS5610
                     </a>
@@ -197,6 +194,10 @@
             </tr>
             </tbody>
         </table>
+
+        <div class="wbdv-bottom-fixed-btn">
+            <button class="btn btn-sm wbdv-nav-add" type="submit"><i class="fas fa-plus fa-sm wbdv-nav-plus"></i></button>
+        </div>
     </div>
 
 </div>
