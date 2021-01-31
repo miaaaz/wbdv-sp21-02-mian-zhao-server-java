@@ -2,7 +2,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     font-weight: 200;
-    background-color: #FF4D4D;
+    /*background-color: #FF4D4D;*/
 }
 
 .wbdv-wrapper {
@@ -17,6 +17,14 @@ body {
     padding: 40px 20px;
     border-radius: 20px;
     margin: 0 auto;
+    box-shadow: 1px 2px 3px #efefef;
+    border: #e8e8e8 1px solid;
+}
+
+.wbdv-header {
+    font-size: 25px;
+    font-weight: 600;
+    color: #818181;
 }
 
 #wbdv-login {
@@ -27,6 +35,16 @@ body {
 
 #wbdv-login:hover {
     background-color: #B33636;
+}
+
+#wbdv-cancel {
+    background-color: #FFD3D3;
+    color: #FF4D4D;
+}
+
+#wbdv-cancel:hover {
+    background-color: #B33636;
+    color: white;
 }
 
 a:link {
