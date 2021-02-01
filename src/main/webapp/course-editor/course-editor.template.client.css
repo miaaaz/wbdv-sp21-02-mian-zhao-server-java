@@ -7,13 +7,18 @@ body {
 /*Top navbar*/
 .navbar {
   background-color: white;
-  box-shadow: 0 1px 0 0 #eeeeee;
+  box-shadow: 0 1px 0 0 #e0e0e0;
   font-weight: 500;
 }
 
+/*Navbar edit icon*/
+.fa-edit {
+  font-weight: 200;
+}
+
 .navbar-brand {
-  font-weight: 600;
-  color: #818181;
+  font-weight: 300;
+  color: #696969;
 }
 
 .navbar-brand:hover {
@@ -59,14 +64,14 @@ body {
 /*Left sidebar wrapper*/
 .wbdv-sidebar-wrapper {
   padding-right: 0;
-  background-color: #FF4D4D;
   min-height: 100vh;
-  font-size: 14px;
+  font-size: 15px;
+  border: 1px solid #e0e0e0;
 }
 
 /*Sidebar item*/
 .wbdv-sidebar-item {
-  padding: 10px 30px;
+  padding: 13px 30px;
 }
 
 .wbdv-sidebar-item a:link {
@@ -74,14 +79,16 @@ body {
   color: #FF4D4D;
 }
 
+/*Inactive module item*/
 .wbdv-sidebar-item a:not(.active):visited {
   text-decoration: none;
-  color: white;
+  color: #4f4f4f;
 }
 
+/*Inactive module item*/
 .wbdv-sidebar-item a:not(.active):link {
   text-decoration: none;
-  color: white;
+  color: #FF4D4D;
 }
 
 /*Active visited sidebar item*/
@@ -92,17 +99,12 @@ body {
 
 /*Hover on inactive sidebar item*/
 .wbdv-sidebar-item a:not(.active):hover {
-  color: #FFD3D3;
+  color: #FF4D4D;
 }
 
-/*Hover on module box*/
-li:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-/*Hover on module content*/
+/*Hover on active sidebar item*/
 .wbdv-sidebar-item a:hover {
-  color: #B33636;
+  color: #FF4D4D;
 }
 
 /*All topic pills*/
@@ -118,15 +120,12 @@ li:hover {
 /*Inactive topics*/
 .nav-pills .nav-link:not(.active) {
   background-color: white;
-  color: #FF4D4D;
-  border: 1px #FF4D4D solid;
+  color: grey;
 }
 
 /*Inactive topics on hover*/
 .nav-pills .nav-link:not(.active):hover {
-  background-color: #FFD3D3;
   color: #FF4D4D;
-  border: 1px #FFD3D3 solid;
 }
 
 /*Active topic*/
@@ -137,6 +136,7 @@ li:hover {
 
 .nav-link {
   margin-right: 30px;
+  padding: 5px 14px;
 }
 
 /*Close buttons*/
@@ -144,8 +144,13 @@ li:hover {
   padding-right: 0;
 }
 
+.wbdv-add-topic {
+  font-weight: 200;
+}
+
 .wbdv-module-delete-icon {
   margin: 5px;
+  font-weight: 200;
 }
 
 .wbdv-module-nav {
@@ -154,13 +159,13 @@ li:hover {
 
 /*Add button wrapper in the sidebar*/
 .wbdv-module-add-div {
-  padding: 10px 25px;
+  padding: 8px 32px;
 }
 
 /*Add button in the sidebar*/
 .wbdv-module-add-btn {
-  color: white;
-  border-color: white;
+  color: grey;
+  border-color: grey;
 }
 
 /*Custom style for buttons on hover*/
@@ -168,6 +173,10 @@ li:hover {
   background-color: #FFD3D3;
   color: #FF4D4D;
   border-color: #FFD3D3;
+}
+
+.wbdv-module-add-icon {
+  font-weight: 200;
 }
 
 .wbdv-sidebar {
@@ -195,7 +204,4 @@ li:hover {
   color: grey;
 }
 
-.wbdv-main-color {
-  color: #ff7400;
-}
 
