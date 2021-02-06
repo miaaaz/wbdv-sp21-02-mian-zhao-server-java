@@ -5,14 +5,14 @@
   var $firstNameFld, $lastNameFld, $roleFld;
   var $removeBtn, $editBtn, $createBtn;
   var $userRowTemplate, $tbody;
-  // var userService = new AdminUserServiceClient();
+  var userService =  new AdminUserServiceClient()
 
 
   $(main)
 
   var users = [
-    {username: "ada", password: "", firstName: "Ada", lastName: "Lovelace", role: "Faculty"},
-    {username: "sfa", password: "", firstName: "Bo", lastName: "Chen", role: "Faculty"},
+    // {username: "ada", password: "", firstName: "Ada", lastName: "Lovelace", role: "Faculty"},
+    // {username: "sfa", password: "", firstName: "Bo", lastName: "Chen", role: "Faculty"},
   ]
 
   function main() {
@@ -26,6 +26,8 @@
     $editBtn = $(".wbdv-edit")
     $createBtn = $(".wbdv-create")
     $removeBtn = $(".wbdv-remove")
+
+
 
     $createBtn.click(createUser)
     renderUsers(users)
@@ -71,8 +73,12 @@
       lastName: $lastNameFld.val(),
       role: $roleFld.val()
     }
-    users.push(newUser)
-    renderUsers(users)
+
+    userService.createUser(newUser).then(function (actualUser) {
+      users.push(actualUser)
+      renderUsers(users)
+    })
+
 
   }
 
