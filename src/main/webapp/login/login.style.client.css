@@ -1,0 +1,62 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.wbdv-wrapper {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.wbdv-login-box {
+    max-width: 350px;
+    height: 410px;
+    background-color: white;
+    padding: 40px 20px;
+    border-radius: 20px;
+    margin: 0 auto;
+    box-shadow: 1px 2px 3px #efefef;
+    border: #e8e8e8 1px solid;
+}
+
+.wbdv-header {
+    font-size: 25px;
+    font-weight: 600;
+    color: #818181;
+}
+
+#wbdv-login {
+    background-color: #FF4D4D;
+    color: white;
+    margin-bottom: 5px;
+}
+
+#wbdv-login:hover {
+    background-color: #B33636;
+}
+
+#wbdv-cancel {
+    background-color: #FFD3D3;
+    color: #FF4D4D;
+}
+
+#wbdv-cancel:hover {
+    background-color: #B33636;
+    color: white;
+}
+
+a:link {
+    text-decoration: none;
+    color: grey;
+}
+
+a:visited {
+    text-decoration: none;
+    color: grey;
+}
+
+a:hover {
+    color: #FF4D4D;
+}
+

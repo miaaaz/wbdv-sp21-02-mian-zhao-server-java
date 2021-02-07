@@ -1,0 +1,112 @@
+body {
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.container {
+  padding-top: 15px;
+}
+
+/*Top navbar*/
+.navbar {
+  background-color: white;
+  box-shadow: 0 1px 0 0 #eeeeee;
+  padding: 8px 13px;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+a:link {
+  text-decoration: none;
+  color: grey;
+}
+
+a:visited {
+  text-decoration: none;
+  color: grey;
+}
+
+a:hover {
+  color: #FF4D4D;
+}
+
+.wbdv-nav-plus {
+  color: black;
+  font-weight: 400;
+}
+
+.navbar-brand {
+  padding-left: 10px;
+  color: #3e3e3e;
+  font-weight: 300;
+}
+
+
+.wbdv-nav-menu {
+  color: black;
+}
+
+.wbdv-table-wrapper {
+  background-color: white;
+
+}
+
+.wbdv-thead {
+  font-weight: 500;
+  font-size: 14px;
+  color: #4c4c4c;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+/*Text align*/
+td {
+  text-align: center;
+}
+
+tbody {
+  color: grey;
+}
+
+.wbdv-time {
+  color: #606060;
+}
+
+.fa-trash-alt {
+  color: #FF4D4D;
+}
+
+.wbdv-table-wrapper {
+  border: 1px solid #eeeeee;
+  margin-bottom: 20px;
+}
+
+.wbdv-input {
+  font-size: 13px;
+  font-weight: 100;
+}
+
+.wbdv-nav-add {
+  border: #dddddd 1px solid;
+  width: 33px;
+  height: 30px;
+  border-radius: 60px;
+  background-color: #ffffff;
+}
+
+.wbdv-nav-add:hover {
+  border: #aeaeae 1px solid;
+}
+
+.wbdv-bottom-fixed-btn {
+  position: fixed;
+  bottom: 12px;
+  right: 16px;
+}
