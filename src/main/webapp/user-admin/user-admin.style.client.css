@@ -39,10 +39,6 @@ tbody {
   border-bottom: none;
 }
 
-/*.wbdv-tbody td, .wbdv-thead th {*/
-/*  padding-left: 25px;*/
-/*}*/
-
 .wbdv-table-wrapper {
   border: 1px solid #eeeeee;
   margin: 20px auto;
@@ -67,12 +63,8 @@ tbody {
 }
 
 
-.wbdv-edit {
-  /*margin-left: 12px;*/
-}
-
-.wbdv-form-icons {
-  padding-top:15px;
+.table .wbdv-form-icons {
+  padding-top:22px;
 }
 
 button {

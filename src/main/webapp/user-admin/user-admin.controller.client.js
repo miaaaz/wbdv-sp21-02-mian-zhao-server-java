@@ -1,10 +1,11 @@
 (function () {
 
-  var $usernameFld, $passwordFld;
-  var $firstNameFld, $lastNameFld, $roleFld;
-  var $removeBtn, $editBtn, $createBtn;
-  var $userRowTemplate, $updateBtn, $tbody;
-  var selectedUser;
+  var $usernameFld, $passwordFld
+  var $firstNameFld, $lastNameFld, $roleFld
+  var $removeBtn, $editBtn, $createBtn
+  var $userRowTemplate, $updateBtn, $tbody
+  var $searchBtn
+  var selectedUser
   var userService =  new AdminUserServiceClient()
 
 
@@ -24,12 +25,14 @@
     $createBtn = $(".wbdv-create")
     $removeBtn = $(".wbdv-remove")
     $updateBtn = $(".wbdv-update")
+    $searchBtn = $(".wbdv-search")
 
     findAllUsers()
 
     // Listen to create user button
     $createBtn.click(createUser)
     $updateBtn.click(updateUser)
+    $searchBtn.click(searchUsers)
 
   }
 
@@ -98,13 +101,6 @@
       })
   }
 
-  function findAllUsers() {
-    userService.findAllUsers().then(function (allUsers) {
-      users = allUsers
-      renderUsers(users)
-    })
-  }
-
   function renderUsers(users) {
     $userRowTemplate.empty()
     for (var i=0; i < users.length; i++) {
@@ -116,12 +112,12 @@
           <td class="wbdv-first-name">${user.firstName}</td>
           <td class="wbdv-last-name">${user.lastName}</td>
           <td class="wbdv-role">${user.role}</td>
-          <td class="wbdv-actions" style="white-space: nowrap">
-            <button class="float-right">
-              <i id="${i}" class="wbdv-remove fa fa fa-times wbdv-remove wbdv-icon"></i>
+          <td class="wbdv-actions float-end" style="white-space: nowrap">
+            <button class="wbdv-remove-btn">
+              <i id="${i}" class="wbdv-remove fa fa fa-times wbdv-icon"></i>
             </button>
-            <button class="float-right">
-              <i id="${i}" class="wbdv-edit fa fa fa-pencil wbdv-edit wbdv-icon"></i>
+            <button class="wbdv-edit-btn">
+              <i id="${i}" class="wbdv-edit fa fa fa-pencil wbdv-icon"></i>
             </button>
         </tr>
       `
@@ -131,5 +127,26 @@
     $(".wbdv-edit").click(selectUser)
   }
 
+  function findAllUsers() {
+    userService.findAllUsers().then(function (allUsers) {
+      users = allUsers
+      renderUsers(users)
+    })
+  }
+
+  function searchUsers() {
+    var username =  $usernameFld.val()
+    var firstName = $firstNameFld.val()
+    var lastName = $lastNameFld.val()
+    var role =  $roleFld.val()
+
+    var foundUsers = users.filter(user => user.username === username
+        || user.firstName === firstName
+        || user.lastName === lastName
+        || user.role === role
+    )
+
+    renderUsers(foundUsers)
+  }
 
 }) ();
