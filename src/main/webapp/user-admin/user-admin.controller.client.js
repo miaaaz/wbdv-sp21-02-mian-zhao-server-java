@@ -26,10 +26,13 @@
     $createBtn = $(".wbdv-create")
     $removeBtn = $(".wbdv-remove")
 
+    findAllUsers()
 
-
-    $createBtn.click(createUser)
-    renderUsers(users)
+    // $createBtn.click(createUser)
+    // userService.findAllUsers().then(function (allUsers) {
+    //   users = allUsers
+    //   renderUsers(users)
+    // })
 
   }
 
@@ -83,10 +86,15 @@
 
 
   function deleteUser(event) {
-      var button = $(event.target)
-      var id = button.attr("id")
-      users.splice(id, 1)
+    var button = $(event.target)
+    var index = button.attr("id")
+    var theUserId = users[index]._id
+    console.log(theUserId)
+
+    userService.deleteUser(theUserId).then(function (status){
+      users.splice(index, 1)
       renderUsers(users)
+    })
   }
 
   function selectUser(event) {
@@ -98,6 +106,13 @@
     $lastNameFld.val(selectedUser.lastName)
     $roleFld.val(selectedUser.role)
 
+  }
+
+  function findAllUsers() {
+    userService.findAllUsers().then(function (allUsers) {
+      users = allUsers
+      renderUsers(users)
+    })
   }
 
 
