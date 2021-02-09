@@ -14,7 +14,8 @@
   var users = []
 
   function main() {
-    $userRowTemplate = $("#wbdv-tbody")
+    $tbody = $("#wbdv-tbody")
+    $userRowTemplate = $("#wbdv-template")
     $usernameFld = $("#usernameFld")
     $passwordFld = $("#passwordFld")
     $firstNameFld = $("#firstNameFld")
@@ -37,24 +38,32 @@
   }
 
   function createUser() {
-    var newUser = {
-      username: $usernameFld.val(),
-      password: $passwordFld.val(),
-      firstName: $firstNameFld.val(),
-      lastName: $lastNameFld.val(),
-      role: $roleFld.val()
+    if ($usernameFld.val() && $passwordFld.val() && $firstNameFld.val()
+        && $lastNameFld.val() && $roleFld.val()) {
+      var newUser = {
+        username: $usernameFld.val(),
+        password: $passwordFld.val(),
+        firstName: $firstNameFld.val(),
+        lastName: $lastNameFld.val(),
+        role: $roleFld.val()
+      }
+
+      // Clear the input field
+      $usernameFld.val('')
+      $passwordFld.val('')
+      $firstNameFld.val('')
+      $lastNameFld.val('')
+
+      userService.createUser(newUser).then(function (actualUser) {
+        users.push(actualUser)
+        renderUsers(users)
+      })
+    } else {
+      alert("Inputs should not be empty.")
     }
 
-    // Clear the input field
-    $usernameFld.val('')
-    $passwordFld.val('')
-    $firstNameFld.val('')
-    $lastNameFld.val('')
 
-    userService.createUser(newUser).then(function (actualUser) {
-      users.push(actualUser)
-      renderUsers(users)
-    })
+
   }
 
 
@@ -102,10 +111,10 @@
   }
 
   function renderUsers(users) {
-    $userRowTemplate.empty()
+    $tbody.empty()
     for (var i=0; i < users.length; i++) {
       var user = users[i]
-      $userRowTemplate.append(`
+      $tbody.append(`
         <tr class="wbdv-template wbdv-user wbdv-hidden">
           <td class="wbdv-username">${user.username}</td>
           <td>&nbsp;</td>
@@ -148,5 +157,6 @@
 
     renderUsers(foundUsers)
   }
+
 
 }) ();

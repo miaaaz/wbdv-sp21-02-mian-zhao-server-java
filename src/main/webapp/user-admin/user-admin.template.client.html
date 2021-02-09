@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <title>User Admin</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  <link rel="stylesheet" href=
-      "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link href="user-admin.style.client.css" rel="stylesheet" />
   <!--    Google fonts-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,37 +16,14 @@
 <body>
 
 <div class="container">
-  <h1 class="wbdv-heading h3">User Admin</h1>
 
-  <table class="table table-borderless">
-    <tr class="wbdv-form">
-      <td><input id="usernameFld" class="form-control"
-                 placeholder="Username" type="text"/></td>
-      <td><input id="passwordFld" class="form-control"
-                 placeholder="Password" type="password"/></td>
-      <td><input id="firstNameFld" class="form-control"
-                 placeholder="First Name" type="text"/></td>
-      <td><input id="lastNameFld" class="form-control"
-                 placeholder="Last Name" type="text"/></td>
-      <td><select id="roleFld" class="form-select">
-        <option value="FACULTY">Faculty</option>
-        <option value="STUDENT">Student</option>
-        <option value="ADMIN">Admin</option>
-      </select></td>
-      <td class="wbdv-form-icons align-middle float-end" style="white-space: nowrap">
-        <button class="align-middle">
-          <i class="fa-2x fa fa-search wbdv-search wbdv-icon"></i>
-        </button>
-        <button class="align-middle">
-          <i class="fa-2x fa fa-plus wbdv-create wbdv-icon"></i>
-        </button>
-        <button class="align-middle">
-          <i class="fa-2x fa fa-check wbdv-update wbdv-icon"></i>
-        </button>
-  </table>
+  <nav class="navbar navbar-expand-lg justify-content-between">
+        <h1 class="wbdv-heading h3">User Admin</h1>
+        <a href="../index.html" class="wbdv-home">Home</a>
+  </nav>
 
 
-  <div class="wbdv-table-wrapper shadow-sm rounded container-fluid">
+  <div class="wbdv-table-wrapper table-responsive">
     <table class="table table-borderless">
 
       <thead >
@@ -58,6 +34,32 @@
         <td>Last Name</td>
         <td>Role</td>
         <td>&nbsp;</td>
+      </tr>
+      <tr class="wbdv-form">
+        <td><input id="usernameFld" class="form-control"
+                   placeholder="Username" type="text"/></td>
+        <td><input id="passwordFld" class="form-control"
+                   placeholder="Password" type="password"/></td>
+        <td><input id="firstNameFld" class="form-control"
+                   placeholder="First Name" type="text"/></td>
+        <td><input id="lastNameFld" class="form-control"
+                   placeholder="Last Name" type="text"/></td>
+        <td><select id="roleFld" class="form-select">
+          <option value="FACULTY">Faculty</option>
+          <option value="STUDENT">Student</option>
+          <option value="ADMIN">Admin</option>
+        </select></td>
+        <td class="wbdv-form-icons align-middle float-end" >
+          <button class="align-middle">
+            <i class="fa-2x fa fa-search wbdv-search wbdv-icon"></i>
+          </button>
+          <button class="align-middle">
+            <i class="fa-2x fa fa-plus wbdv-create wbdv-icon"></i>
+          </button>
+          <button class="align-middle">
+            <i class="fa-2x fa fa-check wbdv-update wbdv-icon"></i>
+          </button>
+        </td>
       </tr>
       </thead>
 

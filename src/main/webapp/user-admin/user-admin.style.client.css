@@ -1,12 +1,25 @@
 body {
   font-family: 'Poppins', sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 200;
 }
 
+.navbar {
+  padding: 30px 7px 10px 5px;
+}
+
+.wbdv-home {
+  color: grey;
+  text-decoration: none;
+}
+
+.wbdv-home:hover {
+  color: #3e3e3e;
+}
+
+
 .wbdv-heading {
   font-weight: 300;
-  margin: 15px auto;
 }
 
 .form-select, .form-control {
@@ -31,7 +44,7 @@ tbody {
 
 .table td, .table th {
   border-top: none;
-  padding: 16px 8px;
+  padding: 12px 8px;
 }
 
 .table thead th {
@@ -39,10 +52,6 @@ tbody {
   border-bottom: none;
 }
 
-.wbdv-table-wrapper {
-  border: 1px solid #eeeeee;
-  margin: 20px auto;
-}
 
 .wbdv-thead {
   font-weight: 500;
@@ -63,8 +72,9 @@ tbody {
 }
 
 
-.table .wbdv-form-icons {
-  padding-top:22px;
+table .wbdv-form-icons {
+  padding-top:18px;
+  white-space: nowrap;
 }
 
 button {
