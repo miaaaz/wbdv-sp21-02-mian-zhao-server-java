@@ -152,9 +152,9 @@
     var role =  $roleFld.val()
 
     var foundUsers = users.filter(user => user.username === username
-        || user.firstName === firstName
-        || user.lastName === lastName
-        || user.role === role
+        && user.firstName === firstName
+        && user.lastName === lastName
+        && user.role === role
     )
 
     renderUsers(foundUsers)
