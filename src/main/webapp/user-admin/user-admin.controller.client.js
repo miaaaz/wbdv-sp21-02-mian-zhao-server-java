@@ -53,6 +53,7 @@
       $passwordFld.val('')
       $firstNameFld.val('')
       $lastNameFld.val('')
+      $roleFld.val('FACULTY')
 
       userService.createUser(newUser).then(function (actualUser) {
         users.push(actualUser)
@@ -101,6 +102,7 @@
     $passwordFld.val('')
     $firstNameFld.val('')
     $lastNameFld.val('')
+    $roleFld.val('FACULTY')
 
     userService.updateUser(selectedUser._id, selectedUser)
       .then(function (status) {
@@ -117,7 +119,7 @@
       $tbody.append(`
         <tr class="wbdv-template wbdv-user wbdv-hidden">
           <td class="wbdv-username">${user.username}</td>
-          <td>&nbsp;</td>
+          <td class="wbdv-password">***********</td>
           <td class="wbdv-first-name">${user.firstName}</td>
           <td class="wbdv-last-name">${user.lastName}</td>
           <td class="wbdv-role">${user.role}</td>
