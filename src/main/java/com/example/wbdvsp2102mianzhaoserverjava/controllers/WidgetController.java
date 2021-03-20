@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -59,7 +60,7 @@ public class WidgetController {
    */
   @PutMapping("/api/widgets/{wid}")
   public int updateWidget(
-      @PathVariable("wid") String wid,
+      @PathVariable("wid") Long wid,
       @RequestBody Widget widget) {
     return service.updateWidget(wid, widget);
   }
@@ -71,7 +72,9 @@ public class WidgetController {
    * @return 1 if deletes successfully, 0 otherwise
    */
   @DeleteMapping("/api/widgets/{wid}")
-  public int deleteWidget(@PathVariable("wid") String wid) {
+  public int deleteWidget(@PathVariable("wid") Long wid) {
     return service.deleteWidget(wid);
   }
+
+
 }
