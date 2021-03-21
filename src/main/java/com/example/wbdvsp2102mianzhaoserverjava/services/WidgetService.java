@@ -10,16 +10,7 @@ import org.springframework.stereotype.Service;
 public class WidgetService {
 
   private List<Widget> widgets = new ArrayList<>();
-
-//  {
-//    Widget w1 = new Widget(123L, "HEADING", 1, "hii", "60444d4363561d001713de7f");
-//    Widget w2 = new Widget(456L,"PARAGRAPH", 2, "PARAGRAPH", "60444d4363561d001713de7f");
-//    Widget w3 = new Widget(789L, "HEADING", 1, "h2", "60444d4363561d001713de7f");
-//    widgets.add(w1);
-//    widgets.add(w2);
-//    widgets.add(w3);
-//  }
-
+  
   /**
    * Creates a new Widget instance and add it to the existing collection of widgets for a topic
    * whose ID is tid.
