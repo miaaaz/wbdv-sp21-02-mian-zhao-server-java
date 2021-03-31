@@ -1,16 +1,17 @@
 package com.example.wbdvsp2102mianzhaoserverjava.services;
 
 import com.example.wbdvsp2102mianzhaoserverjava.models.Widget;
-import java.util.ArrayList;
-import java.util.Date;
+import com.example.wbdvsp2102mianzhaoserverjava.repositories.WidgetRepository;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class WidgetService {
 
-  private List<Widget> widgets = new ArrayList<>();
-  
+  @Autowired
+  WidgetRepository repository;
+
   /**
    * Creates a new Widget instance and add it to the existing collection of widgets for a topic
    * whose ID is tid.
@@ -21,9 +22,15 @@ public class WidgetService {
    */
   public Widget createWidget(String tid, Widget widget) {
     widget.setTopicId(tid);
-    widget.setId((new Date()).getTime());
-    widgets.add(widget);
-    return widget;
+    return repository.save(widget);
+  }
+
+  /**
+   * Returns collection of all widgets
+   * @return collection of all widgets
+   */
+  public List<Widget> findAllWidgets() {
+    return (List<Widget>) repository.findAll();
   }
 
   /**
@@ -33,13 +40,7 @@ public class WidgetService {
    * @return a collection of all widgets for a topic whose ID is tid
    */
   public List<Widget> findWidgetsForTopic(String tid) {
-    List<Widget> ws = new ArrayList<>();
-    for (Widget w : widgets) {
-      if (w.getTopicId().equals(tid)) {
-        ws.add(w);
-      }
-    }
-    return ws;
+    return repository.findWidgetsForTopic(tid);
   }
 
   /**
@@ -51,13 +52,18 @@ public class WidgetService {
    * @return 1 if updates successfully, 0 otherwise
    */
   public int updateWidget(Long wid, Widget widget) {
-    for (int i = 0; i < widgets.size(); i++) {
-      if (widgets.get(i).getId().equals(wid)) {
-        widgets.set(i, widget);
-        return 1;
-      }
-    }
-    return 0;
+    Widget originalWidget = repository.findWidgetById(wid);
+
+    originalWidget.setText(widget.getText());
+    originalWidget.setUrl(widget.getUrl());
+    originalWidget.setHeight(widget.getHeight());
+    originalWidget.setWidth(widget.getWidth());
+    originalWidget.setOrdered(widget.getOrdered());
+    originalWidget.setSize(widget.getSize());
+    originalWidget.setType(widget.getType());
+
+    repository.save(originalWidget);
+    return 1;
   }
 
   /**
@@ -67,15 +73,17 @@ public class WidgetService {
    * @return 1 if deletes successfully, 0 otherwise
    */
   public int deleteWidget(Long wid) {
-    int index = -1;
-    for (int i = 0; i < widgets.size(); i++) {
-      if (widgets.get(i).getId().equals(wid)) {
-        index = i;
-        widgets.remove(index);
-        return 1;
-      }
-    }
-    return 0;
+    repository.deleteById(wid);
+    return 1;
+  }
+
+  /**
+   * Returns a single widget instance whose id is equal to wid
+   * @param wid The widget id
+   * @return a single widget instance whose id is equal to wid
+   */
+  public Widget findWidgetById(Long wid) {
+    return repository.findWidgetById(wid);
   }
 
 }

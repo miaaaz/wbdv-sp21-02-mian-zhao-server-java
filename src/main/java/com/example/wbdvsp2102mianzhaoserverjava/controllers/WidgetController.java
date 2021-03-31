@@ -76,5 +76,15 @@ public class WidgetController {
     return service.deleteWidget(wid);
   }
 
+  /**
+   * Returns all widgets
+   *
+   * @return all widgets
+   */
+  @GetMapping("/api/widgets")
+  public List<Widget> findAllWidgets() {
+    return service.findAllWidgets();
+  }
+
 
 }
